@@ -31,19 +31,14 @@ jobs:
       - name: Maven Package
         run: mvn clean package
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
+      # Runs cmd to upload artifacts using the runners shell
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: dist-without-markdown
+          name: upload jar
           path: |
             target/app.jar
-      - name: Archive code coverage results
-        uses: actions/upload-artifact@v2
+      - name: Download artifact
+        uses: actions/download-artifact@v2
         with:
-          name: code-coverage-report
-          path: target/app.jar
+          name: upload jar
