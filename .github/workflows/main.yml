@@ -29,7 +29,7 @@ jobs:
         with:
           java-version: 1.8
       - name: Maven Package
-        run: mvn clean package
+        run: pwd
 
       # Runs cmd to upload artifacts using the runners shell
       - name: Archive production artifacts
