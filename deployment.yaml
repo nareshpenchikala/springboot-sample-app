@@ -1,37 +1,37 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: voting-app-deploy
+  name: spring-app-deploy
   labels:
-    name: voting-app-deploy
-    app: demo-voting-app
+    name: spring-app-deploy
+    app: demo-spring-app
 spec:
   template:
     metadata:
-      name: voting-app-pod
+      name: spring-app-pod
       labels:
-        name: voting-app-pod
-        app: demo-voting-app
+        name: spring-app-pod
+        app: demo-spring-app
     spec:
       containers:
-        - name: voting-app
+        - name: spring-app
           image: nareshpenchikala/kube-spring:latest
           ports:
             - containerPort: 8080
   selector:
     matchLabels:
-      name: voting-app-pod
-      app: demo-voting-app
+      name: spring-app-pod
+      app: demo-spring-app
   replicas: 2
   
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: voting-service
+  name: spring-service
   labels:
-    name: voting-service
-    app: demo-voting-app
+    name: spring-service
+    app: demo-spring-app
 spec:
   type: NodePort
   ports:
@@ -39,6 +39,6 @@ spec:
       targetPort: 8080
       nodePort: 30005
   selector:
-    name: voting-app-pod
-    app: demo-voting-app
+    name: spring-app-pod
+    app: demo-spring-app
 
