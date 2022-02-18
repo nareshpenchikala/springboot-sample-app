@@ -1,0 +1,9 @@
+- hosts: all
+  tasks:
+    - name: copy artifacts
+      copy:
+        src: target/app.jar
+        dest: /home/ubuntu/
+
+    - name: run commands
+      command: screen -d -m "java -jar app.jar"
