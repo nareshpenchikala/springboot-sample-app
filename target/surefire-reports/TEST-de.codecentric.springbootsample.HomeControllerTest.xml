@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="de.codecentric.springbootsample.HomeControllerTest" time="0.175" tests="7" errors="0" skipped="0" failures="0">
+<testsuite name="de.codecentric.springbootsample.HomeControllerTest" time="0.16" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.14+9-Ubuntu-0ubuntu2.20.04"/>
@@ -59,11 +59,11 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="shouldSaveRecordWhenThereAreNoErrors" classname="de.codecentric.springbootsample.HomeControllerTest$InsertData" time="0.16"/>
-  <testcase name="shouldNotSaveRecordWhenThereAreErrors" classname="de.codecentric.springbootsample.HomeControllerTest$InsertData" time="0.002"/>
-  <testcase name="shouldAddRecordsToModelMap" classname="de.codecentric.springbootsample.HomeControllerTest$InsertData" time="0.005"/>
+  <testcase name="shouldSaveRecordWhenThereAreNoErrors" classname="de.codecentric.springbootsample.HomeControllerTest$InsertData" time="0.145"/>
+  <testcase name="shouldNotSaveRecordWhenThereAreErrors" classname="de.codecentric.springbootsample.HomeControllerTest$InsertData" time="0.001"/>
+  <testcase name="shouldAddRecordsToModelMap" classname="de.codecentric.springbootsample.HomeControllerTest$InsertData" time="0.008"/>
   <testcase name="shouldAddNewInsertRecordToModelMap" classname="de.codecentric.springbootsample.HomeControllerTest$InsertData" time="0.001"/>
-  <testcase name="shouldQueryRepositoryForAllRecords" classname="de.codecentric.springbootsample.HomeControllerTest$Home" time="0.002"/>
-  <testcase name="shouldAddInsertRecordToModelMap" classname="de.codecentric.springbootsample.HomeControllerTest$Home" time="0.001"/>
+  <testcase name="shouldQueryRepositoryForAllRecords" classname="de.codecentric.springbootsample.HomeControllerTest$Home" time="0.001"/>
+  <testcase name="shouldAddInsertRecordToModelMap" classname="de.codecentric.springbootsample.HomeControllerTest$Home" time="0"/>
   <testcase name="shouldAddRecordsFromRepositoryToModelMap" classname="de.codecentric.springbootsample.HomeControllerTest$Home" time="0.004"/>
 </testsuite>
